@@ -1,116 +1,79 @@
-# PopX — React.js App
-
-Pixel-perfect implementation of the PopX 4-screen mobile app design.
-
-## 📱 Screens
-1. **Welcome** → `/welcome`
-2. **Sign Up** → `/signup`
-3. **Sign In** → `/signin`
-4. **Profile** → `/profile`
+# React Project — Setup, GitHub & Vercel Deployment Guide
 
 ---
 
-## 🛠 Step-by-Step Setup Guide
+## ⚛️ 1. Create a React Project
 
 ### Prerequisites
-Make sure you have installed:
-- **Node.js** (v16 or above) — download from https://nodejs.org
+Make sure you have the following installed:
+- **Node.js** (v16 or above) — [nodejs.org](https://nodejs.org)
 - **npm** (comes with Node.js)
-- **Git** — download from https://git-scm.com
 
-Verify by running in terminal:
+Verify by running:
 ```bash
 node -v
 npm -v
-git --version
 ```
 
----
-
-### Step 1 — Download & Extract
-Extract the zip file you downloaded. You'll get a folder called `popx-app`.
-
-### Step 2 — Open Terminal in the Project Folder
+### Create the App
 ```bash
-cd popx-app
+npx create-react-app my-app
 ```
+Replace `my-app` with your project name.
 
-### Step 3 — Install Dependencies
+### Navigate into the Project
 ```bash
-npm install
+cd my-app
 ```
-This installs React, React Router, and all dependencies. Takes ~1–2 minutes.
 
-### Step 4 — Run Locally
+### Start the Development Server
 ```bash
 npm start
 ```
-Opens http://localhost:3000 in your browser automatically.
+Opens [http://localhost:3000](http://localhost:3000) in your browser automatically.
 
 ---
 
-## 🚀 Deploy to Vercel (Free Hosting)
+## 🐙 2. Push Code to GitHub
 
-### Option A — Vercel CLI
+### Step 1 — Create a GitHub Repository
+1. Go to [github.com](https://github.com) and sign in.
+2. Click **"New"** → Enter a repository name → Click **"Create repository"**.
+
+### Step 2 — Initialize Git in Your Project
+Open your terminal inside the project folder and run:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+### Step 3 — Connect to GitHub & Push
+```bash
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git push -u origin main
+```
+> Replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with your actual GitHub username and repo name.
+
+---
+
+## 🚀 3. Deploy to Vercel (Free Hosting)
+
+### Option A — Via Vercel Dashboard (Recommended)
+1. Go to [vercel.com](https://vercel.com) and sign in with your GitHub account.
+2. Click **"New Project"**.
+3. Import your GitHub repository.
+4. Click **"Deploy"** — Vercel auto-detects React and builds it for you.
+5. ✅ Done! You'll get a live URL like `https://your-app.vercel.app`.
+
+### Option B — Via Vercel CLI
 ```bash
 npm install -g vercel
 vercel
 ```
-Follow the prompts. Done! You'll get a live URL.
-
-### Option B — Vercel Dashboard
-1. Push code to GitHub (see below)
-2. Go to https://vercel.com → New Project
-3. Import your GitHub repo
-4. Click Deploy → Done!
+Follow the prompts in your terminal and your app will be live instantly.
 
 ---
 
-## 📁 Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: PopX app"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/popx-app.git
-git push -u origin main
-```
-
----
-
-## 📁 Project Structure
-```
-popx-app/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── MobileShell.js    # Centered white card wrapper
-│   │   └── MobileShell.css
-│   ├── pages/
-│   │   ├── Welcome.js        # Screen 1: Welcome
-│   │   ├── Welcome.css
-│   │   ├── SignUp.js         # Screen 2: Create Account
-│   │   ├── SignUp.css
-│   │   ├── SignIn.js         # Screen 3: Login
-│   │   ├── SignIn.css
-│   │   ├── Profile.js        # Screen 4: Profile
-│   │   └── Profile.css
-│   ├── App.js                # Routes
-│   ├── index.js
-│   └── index.css
-├── package.json
-├── vercel.json               # SPA routing fix for Vercel
-└── netlify.toml              # SPA routing fix for Netlify
-```
-
-## 🎨 Design Tokens
-| Token | Value |
-|-------|-------|
-| Brand Purple | `#6C25FF` |
-| Light Purple | `#EDE9FF` |
-| Text Dark | `#1D1D1D` |
-| Text Gray | `#6E6E6E` |
-| Border | `#CFCFCF` |
-| Font | Rubik (Google Fonts) |
+> 💡 **Tip:** Every time you push new changes to GitHub, Vercel automatically redeploys your app.

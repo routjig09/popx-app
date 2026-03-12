@@ -1,0 +1,110 @@
+.signin-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 36px 24px 40px;
+}
+
+.signin-header {
+  margin-bottom: 32px;
+}
+
+.signin-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #1D1D1D;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.signin-sub {
+  font-size: 14px;
+  color: #6E6E6E;
+  font-weight: 400;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Reuse the floating-label field style from SignUp */
+.field-group {
+  border: 1.5px solid #CFCFCF;
+  border-radius: 6px;
+  padding: 10px 14px 12px;
+  position: relative;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.field-group:focus-within {
+  border-color: #6C25FF;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6C25FF;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.required {
+  color: #6C25FF;
+}
+
+.field-input {
+  width: 100%;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  color: #1D1D1D;
+  background: transparent;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.field-input::placeholder {
+  color: #C0C0C0;
+}
+
+.field-input:focus {
+  outline: none;
+}
+
+/* Login Button — grey when disabled, purple when enabled */
+.login-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 0.2px;
+  margin-top: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.login-btn.disabled {
+  background: #CBCBCB;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.login-btn.enabled {
+  background: #6C25FF;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login-btn.enabled:hover {
+  background: #5A1EE0;
+}
+
+.login-btn.enabled:active {
+  opacity: 0.85;
+}

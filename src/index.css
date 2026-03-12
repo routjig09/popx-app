@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #6C25FF;
+  --purple-light: #EDE9FF;
+  --purple-mid: #B39DFF;
+  --text-dark: #1D1D1D;
+  --text-gray: #6E6E6E;
+  --text-light: #B3B3B3;
+  --border: #E0E0E0;
+  --bg: #F7F8FA;
+  --white: #FFFFFF;
+  --btn-disabled: #C5C5C5;
+  --font: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: var(--font);
+  outline: none;
+}
